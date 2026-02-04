@@ -3,10 +3,10 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Rigidbody2D _rb;
+    [SerializeField] private Rigidbody2D rb;
 
     [Header("Attributes")]
-    [SerializeField] private float _moveSpeed = 2f;
+    [SerializeField] private float moveSpeed = 2f;
 
     private Transform _target;
     private int _pathIndex = 0;
@@ -16,7 +16,7 @@ public class EnemyMovement : MonoBehaviour
         _target = LevelManager.Instance.path[_pathIndex];
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         if (Vector2.Distance(_target.position, transform.position) <= 0.1f)
@@ -25,6 +25,7 @@ public class EnemyMovement : MonoBehaviour
 
             if (_pathIndex == LevelManager.Instance.path.Length)
             {
+                EnemySpawner.OnEnemyKilled.Invoke();
                 Destroy(gameObject);
                 return;
             }
@@ -39,6 +40,6 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector2 direction = (_target.position - transform.position).normalized;
 
-        _rb.linearVelocity = direction * _moveSpeed;
+        rb.linearVelocity = direction * moveSpeed;
     }
 }

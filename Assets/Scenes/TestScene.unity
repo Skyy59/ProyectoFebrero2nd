@@ -390,12 +390,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53df0701c9cc2a3488971feade5e406a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _enemyPrefabs:
+  enemyPrefabs:
   - {fileID: 9172256901464379989, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  _spawnedEnemies: 8
-  _enemiesperSecond: 0.5
-  _timeBetweenWaves: 5
-  _scalingFactor: 0.75
+  spawnedEnemies: 8
+  enemiesPerSecond: 0.5
+  timeBetweenWaves: 5
+  scalingFactor: 0.75
 --- !u!1001 &42354862
 PrefabInstance:
   m_ObjectHideFlags: 0
