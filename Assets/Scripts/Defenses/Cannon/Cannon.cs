@@ -7,26 +7,24 @@ public class Cannon : MonoBehaviour
     [Header("References")] 
     [SerializeField] private Transform rotationPoint;
     [SerializeField] private LayerMask enemyMask;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firingPoint;
     
     [Header("Attributes")] 
     [SerializeField] private float targetRange = 5f;
     [SerializeField] private float rotationSpeed = 5f;
+    [SerializeField] private float fireRate = 1f;
 
     private Transform _target;
+    private float _untilFire;
     
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (!_target)
         {
             FindTarget();
+            
             return;
         }
 
@@ -35,6 +33,15 @@ public class Cannon : MonoBehaviour
         if (!TargetInRange())
         {
             _target = null;
+        }
+        else
+        {
+            _untilFire += Time.deltaTime;
+            if (_untilFire >= 1f / fireRate)
+            {
+                ShootTarget();
+                _untilFire = 0f;
+            }
         }
     }
 
@@ -50,6 +57,13 @@ public class Cannon : MonoBehaviour
         }
     }
 
+    private void ShootTarget()
+    {
+        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        CannonBall bulletScript = bulletObj.GetComponent<CannonBall>();
+        bulletScript.SetTarget(_target);
+    }
+
     private bool TargetInRange()
     {
         return Vector2.Distance(_target.position, transform.position) <= targetRange;
@@ -57,11 +71,10 @@ public class Cannon : MonoBehaviour
 
     private void RotateToTarget()
     {
-        float angle = Mathf.Atan2(_target.position.y - transform.position.y, transform.position.y - _target.position.x)
-            * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(_target.position.y - transform.position.y, _target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
         
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        rotationPoint.rotation = Quaternion.RotateTowards(rotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
     
     private void OnDrawGizmosSelected()
