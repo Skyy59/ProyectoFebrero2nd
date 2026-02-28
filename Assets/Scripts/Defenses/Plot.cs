@@ -30,8 +30,10 @@ public class Plot : MonoBehaviour
     private void OnMouseDown()
     {
         if (_tower != null) return;
-        
-        GameObject towerToBuild = BuildManager.Main.GetSelectedTower();
-        _tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
+
+        BuildUI.Some.ShowMenu(this);
+
     }
+    
+
 }

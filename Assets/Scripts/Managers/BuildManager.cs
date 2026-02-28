@@ -8,7 +8,8 @@ public class BuildManager : MonoBehaviour
     [SerializeField] private GameObject[] buildingPrefabs;
     
     
-    private int _selectedTower = 0;
+    private int _selectedTower;
+    
     private void Awake()
     {
         Main = this;
