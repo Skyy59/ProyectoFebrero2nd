@@ -26,5 +26,6 @@ public class TowerButton : MonoBehaviour
         
         GameObject turret = Instantiate(turretPrefab, turretPosition.position, Quaternion.identity, turretPosition);
         turret.transform.localPosition = Vector3.zero;
+        
     }
 }

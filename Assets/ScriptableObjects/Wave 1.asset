@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Wave 1
   m_EditorClassIdentifier: Assembly-CSharp::WaveSO
   enemies:
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  - {fileID: 5541317052067181346, guid: fdaf908bb8aa17e408a889f17a518715, type: 3}
-  - {fileID: 5541317052067181346, guid: 0ef80d735a076b3438e73ad44c54447d, type: 3}
+  - {fileID: 5541317052067181346, guid: ecf62e45cf8cccd49a1a498d10f090b2, type: 3}
+  - {fileID: 5541317052067181346, guid: ecf62e45cf8cccd49a1a498d10f090b2, type: 3}
+  - {fileID: 5541317052067181346, guid: ecf62e45cf8cccd49a1a498d10f090b2, type: 3}
+  - {fileID: 5541317052067181346, guid: ecf62e45cf8cccd49a1a498d10f090b2, type: 3}

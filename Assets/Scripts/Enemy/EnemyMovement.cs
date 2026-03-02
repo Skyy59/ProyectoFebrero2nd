@@ -43,3 +43,4 @@ public class EnemyMovement : MonoBehaviour
         rb.linearVelocity = direction * moveSpeed;
     }
 }
+

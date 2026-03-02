@@ -5,7 +5,7 @@ public class BuildUI : MonoBehaviour
     public static BuildUI Some;
         
 
-    private Plot _currentPlot;
+    public Plot currentPlot;
     public TowerUI towerUI;
 
     private void Awake()
@@ -16,7 +16,7 @@ public class BuildUI : MonoBehaviour
 
     public void ShowMenu(Plot plot)
     {
-        _currentPlot = plot;
+        currentPlot = plot;
         towerUI.gameObject.SetActive(true);
         towerUI.AssignButtons(plot.transform);
         Debug.Log("Plot seleccionado: " + plot.name);

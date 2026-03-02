@@ -5,14 +5,12 @@ using UnityEditor;
 public class Cannon : MonoBehaviour
 {
     [Header("References")] 
-    [SerializeField] private Transform rotationPoint;
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
     
     [Header("Attributes")] 
     [SerializeField] private float targetRange = 5f;
-    [SerializeField] private float rotationSpeed = 5f;
     [SerializeField] private float fireRate = 1f;
 
     private Transform _target;
@@ -28,7 +26,7 @@ public class Cannon : MonoBehaviour
             return;
         }
 
-        RotateToTarget();
+       
         
         if (!TargetInRange())
         {
@@ -69,13 +67,7 @@ public class Cannon : MonoBehaviour
         return Vector2.Distance(_target.position, transform.position) <= targetRange;
     }
 
-    private void RotateToTarget()
-    {
-        float angle = Mathf.Atan2(_target.position.y - transform.position.y, _target.position.x - transform.position.x) * Mathf.Rad2Deg - 90f;
-        
-        Quaternion targetRotation = Quaternion.Euler(new Vector3(0f, 0f, angle));
-        rotationPoint.rotation = Quaternion.RotateTowards(rotationPoint.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-    }
+
     
     private void OnDrawGizmosSelected()
     {
