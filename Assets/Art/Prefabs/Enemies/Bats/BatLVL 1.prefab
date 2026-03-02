@@ -240,8 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f200e8520386e347933ee5db5a56de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  hitPoints: 2
-  currency: 50
+  hitPoints: 4
+  currency: 10
 --- !u!95 &6887686384173827637
 Animator:
   serializedVersion: 7

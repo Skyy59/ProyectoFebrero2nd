@@ -171,4 +171,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CannonBall
   rb: {fileID: 6390439183095965332}
   bulletSpeed: 5
-  bulletDamage: 1
+  bulletDamage: 2
