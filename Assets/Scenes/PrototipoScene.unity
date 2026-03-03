@@ -296,7 +296,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ca30ad3d64a76bb4eab6c840013507eb, type: 2}
   - {fileID: 11400000, guid: 867dae1117277e4418320a1fc748c422, type: 2}
   enemiesPerSecond: 0.5
-  timeBetweenWaves: 2
+  timeBetweenWaves: 5
 --- !u!114 &204559504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5829,6 +5829,14 @@ PrefabInstance:
       propertyPath: cost
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 3336193809990024416, guid: 2fe83475f2d132140b955aa8a974dea7, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336193809990024416, guid: 2fe83475f2d132140b955aa8a974dea7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 8887028530405168934, guid: 2fe83475f2d132140b955aa8a974dea7, type: 3}
       propertyPath: m_Name
       value: Panel
