@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2365616964833484296}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.53, y: 0.047, z: 0}
+  m_LocalPosition: {x: 0.42, y: 0.88, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78,9 +78,9 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 128
-  bulletPrefab: {fileID: 334556335390573821, guid: 6c0baf00a1c7aa14e958b54d18ec5542, type: 3}
+  bulletPrefab: {fileID: 334556335390573821, guid: e313d86a06e8fc1489ba515eec118dd2, type: 3}
   firingPoint: {fileID: 3427676204952682201}
-  targetRange: 3.5
+  targetRange: 5
   fireRate: 1
 --- !u!1 &6460940891788628272
 GameObject:
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 6460940891788628272}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.78, z: 0}
+  m_LocalPosition: {x: 0.03, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -164,7 +164,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4809900760327512156, guid: c9dc873251504c749b0f993837647795, type: 3}
+  m_Sprite: {fileID: -3290506585464428746, guid: 9ba2adb8fb4b2b34880387afe5e2812e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -184,7 +184,7 @@ Animator:
   m_GameObject: {fileID: 6460940891788628272}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 3756800760793725606, guid: c9dc873251504c749b0f993837647795, type: 3}
+  m_Controller: {fileID: 554466809007753474, guid: 9ba2adb8fb4b2b34880387afe5e2812e, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -206,7 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2113650285861070234}
   m_Layer: 0
-  m_Name: Turret
+  m_Name: ArcherTower LVL 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,7 +221,7 @@ Transform:
   m_GameObject: {fileID: 7965514725171045801}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

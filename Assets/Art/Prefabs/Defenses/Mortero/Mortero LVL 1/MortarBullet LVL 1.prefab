@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6390439183095965332}
   - component: {fileID: 5132651370030300043}
   m_Layer: 8
-  m_Name: Bullet
+  m_Name: MortarBullet LVL 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 0.7921569, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.026420593, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -171,4 +171,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CannonBall
   rb: {fileID: 6390439183095965332}
   bulletSpeed: 5
-  bulletDamage: 2
+  bulletDamage: 4

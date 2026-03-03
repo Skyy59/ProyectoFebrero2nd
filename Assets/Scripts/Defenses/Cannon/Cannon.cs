@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEditor;
+using UnityEngine.UI;
 
 public class Cannon : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Cannon : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
+    [SerializeField] private GameObject upgradeUI;
+    [SerializeField] private Button upgradeButton;
+    
     
     [Header("Attributes")] 
     [SerializeField] private float targetRange = 5f;
@@ -67,7 +71,15 @@ public class Cannon : MonoBehaviour
         return Vector2.Distance(_target.position, transform.position) <= targetRange;
     }
 
+    public void OpenUpgradeUI()
+    {
+        upgradeUI.SetActive(true);
+    }
 
+    public void CloseUpgradeUI()
+    {
+        upgradeUI.SetActive(false);
+    }
     
     private void OnDrawGizmosSelected()
     {
