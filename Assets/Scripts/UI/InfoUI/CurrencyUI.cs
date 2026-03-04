@@ -12,6 +12,6 @@ public class CurrencyUI : MonoBehaviour
     private void OnGUI()
     {
         currencyUI.text = LevelManager.Instance.currency.ToString();
-        waveUI.text = EnemySpawner.Instance._waveIndex.ToString();
+        waveUI.text = (EnemySpawner.Instance._waveIndex + 1).ToString();
     }
 }
