@@ -87,20 +87,20 @@ MonoBehaviour:
     bulletPrefab: {fileID: 334556335390573821, guid: f655f70acf82c744f9ee401598acd269, type: 3}
     cost: 200
     range: 5
-    fireRate: 1
-    damage: 0
+    fireRate: 2
+    damage: 1
   - animatorController: {fileID: -7503855860940059669, guid: eadde6b836b7a2e47a10e1acc4433498, type: 3}
     bulletPrefab: {fileID: 334556335390573821, guid: 6a9d2aa0f34561e479bb72f4cd0feeb9, type: 3}
     cost: 750
     range: 6
-    fireRate: 1.5
-    damage: 0
+    fireRate: 2.3
+    damage: 2
   - animatorController: {fileID: 8209140024946690119, guid: 8251291f4bed97b4f976c666ae29dde4, type: 3}
     bulletPrefab: {fileID: 334556335390573821, guid: c289ed19bf546bd4daaa629197f6d34b, type: 3}
-    cost: 0
+    cost: 1350
     range: 7
-    fireRate: 2
-    damage: 0
+    fireRate: 3
+    damage: 3
   targetRange: 5
 --- !u!1 &6189891720536284744
 GameObject:

@@ -91,10 +91,10 @@ MonoBehaviour:
     damage: 4
   - animatorController: {fileID: -1791898398780210397, guid: 405d723514938df4f84ae7e9be409698, type: 3}
     bulletPrefab: {fileID: 334556335390573821, guid: db7612e1b754be847b7054b619e73887, type: 3}
-    cost: 0
-    range: 6
-    fireRate: 1.5
-    damage: 0
+    cost: 750
+    range: 10
+    fireRate: 0.5
+    damage: 6
   - animatorController: {fileID: -2438506888055407051, guid: 8a78063cbc827734da99a6ea5c428b3f, type: 3}
     bulletPrefab: {fileID: 334556335390573821, guid: ec7d66af9ecda62419f042fd366df4df, type: 3}
     cost: 0

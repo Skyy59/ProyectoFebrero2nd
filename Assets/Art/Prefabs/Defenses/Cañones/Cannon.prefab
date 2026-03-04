@@ -97,10 +97,10 @@ MonoBehaviour:
     damage: 3
   - animatorController: {fileID: -3973768888270154950, guid: 1304c74410adab340a8518facb5ad881, type: 3}
     bulletPrefab: {fileID: 334556335390573821, guid: d144937bcb96f1740af2352fb924ca89, type: 3}
-    cost: 0
+    cost: 1300
     range: 7
     fireRate: 2
-    damage: 4
+    damage: 5
   targetRange: 5
 --- !u!1 &6189891720536284744
 GameObject:

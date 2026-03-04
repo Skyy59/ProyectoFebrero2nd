@@ -13,14 +13,22 @@ MonoBehaviour:
   m_Name: Wave 3
   m_EditorClassIdentifier: Assembly-CSharp::WaveSO
   enemies:
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
-  - {fileID: 5541317052067181346, guid: 1d796061ca0cb364d9aefbff5c181c6f, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: d626e361dc135bb47b9051c6b94ac1fd, type: 3}
+  - {fileID: 5541317052067181346, guid: 73a9620a96e631f4cb4ef64eb309a50e, type: 3}
+  - {fileID: 5541317052067181346, guid: 73a9620a96e631f4cb4ef64eb309a50e, type: 3}
+  - {fileID: 5541317052067181346, guid: 73a9620a96e631f4cb4ef64eb309a50e, type: 3}
+  - {fileID: 5541317052067181346, guid: 73a9620a96e631f4cb4ef64eb309a50e, type: 3}
