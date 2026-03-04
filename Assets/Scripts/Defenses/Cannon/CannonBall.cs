@@ -9,14 +9,16 @@ public class CannonBall : MonoBehaviour
     
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed = 5f;
-    [SerializeField] private int bulletDamage = 1;
-
+    
+    
+    private int _bulletDamage;
     private Transform _target;
 
 
-    public void SetTarget(Transform target)
+    public void SetTarget(Transform target, int damage)
     {
         _target = target;
+        _bulletDamage = damage;
     }
     
     private void FixedUpdate()
@@ -29,7 +31,11 @@ public class CannonBall : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.GetComponent<EnemyHealth>().TakeDamage(bulletDamage);
+        EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
+        if (enemy != null)
+        {
+            enemy.TakeDamage(_bulletDamage);
+        }
         Destroy(gameObject);
     }
 }

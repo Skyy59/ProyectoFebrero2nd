@@ -6,8 +6,10 @@ using UnityEngine.Events;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner Instance;
+    
     [Header("References")] 
-    [SerializeField] private WaveSO currentWave;
+    public WaveSO currentWave;
     [SerializeField] private WaveSO[] waves;
     
     [Header("Attributes")]
@@ -16,7 +18,7 @@ public class EnemySpawner : MonoBehaviour
     
 
     private int _enemyIndex;
-    private int _waveIndex = 0;
+    public int _waveIndex;
     private int _enemiesLeftSpawn;
     private int _enemiesAlive;
     private float _timeSinceSpawn;
@@ -27,6 +29,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Awake()
     {
+        Instance = this;
         OnEnemyKilled = new UnityEvent();
         OnEnemyKilled.AddListener(EnemyKilled);
     }

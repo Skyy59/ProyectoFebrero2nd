@@ -1,26 +1,48 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
 
+
+
+[System.Serializable]
+public class TowerLevel
+{
+    public RuntimeAnimatorController animatorController;
+    public GameObject bulletPrefab;
+    public int cost;
+    public float range;
+    public float fireRate;
+    public int damage;
+}
+
 public class Cannon : MonoBehaviour
 {
     [Header("References")] 
     [SerializeField] private LayerMask enemyMask;
-    [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
     [SerializeField] private GameObject upgradeUI;
     [SerializeField] private Button upgradeButton;
-    
-    
-    [Header("Attributes")] 
-    [SerializeField] private float targetRange = 5f;
-    [SerializeField] private float fireRate = 1f;
+    [SerializeField] private Animator animator;
 
+
+    [Header("Attributes")] 
+    [SerializeField] private TowerLevel[] levels;
+
+    private int _currentLevel = 0;
+
+    [SerializeField]private float targetRange;
+    private float _fireRate;
+    
     private Transform _target;
     private float _untilFire;
-    
-    
+
+    private void Start()
+    {
+        ApplyLevel(0);
+    }
+
     void Update()
     {
         if (!_target)
@@ -39,7 +61,7 @@ public class Cannon : MonoBehaviour
         else
         {
             _untilFire += Time.deltaTime;
-            if (_untilFire >= 1f / fireRate)
+            if (_untilFire >= 1f / _fireRate)
             {
                 ShootTarget();
                 _untilFire = 0f;
@@ -47,6 +69,31 @@ public class Cannon : MonoBehaviour
         }
     }
 
+
+    public void Upgrade()
+    {
+        if (_currentLevel + 1 >= levels.Length) return;
+        
+        int nextCost  = levels[_currentLevel + 1].cost;
+
+        if (LevelManager.Instance.SpendCurrency(nextCost))
+        {
+            _currentLevel++;
+            ApplyLevel(_currentLevel);
+            CloseUpgradeUI();
+        }
+    }
+
+
+    private void ApplyLevel(int levelIndex)
+    {
+        TowerLevel level =  levels[levelIndex];
+        
+        targetRange = level.range;
+        _fireRate = level.fireRate;
+        animator.runtimeAnimatorController = level.animatorController;
+    }
+    
     private void FindTarget()
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetRange,
@@ -61,9 +108,12 @@ public class Cannon : MonoBehaviour
 
     private void ShootTarget()
     {
-        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        TowerLevel level = levels[_currentLevel];
+        
+        
+        GameObject bulletObj = Instantiate(level.bulletPrefab, firingPoint.position, Quaternion.identity);
         CannonBall bulletScript = bulletObj.GetComponent<CannonBall>();
-        bulletScript.SetTarget(_target);
+        bulletScript.SetTarget(_target, level.damage);
     }
 
     private bool TargetInRange()
