@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.8, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6713888298818307348}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5280241844484569121, guid: d78499a29b47fbd4780f8a224cc8edc5, type: 3}
+  m_Sprite: {fileID: 8024307012120136450, guid: 6e776a77adad5ce4aa5455930c0fa704, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ Animator:
   m_GameObject: {fileID: 1832649331266844899}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 3286998728194271109, guid: d78499a29b47fbd4780f8a224cc8edc5, type: 3}
+  m_Controller: {fileID: -60918268206185975, guid: 6e776a77adad5ce4aa5455930c0fa704, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -127,8 +127,9 @@ GameObject:
   - component: {fileID: 5541317052067181346}
   - component: {fileID: 5262714272494406437}
   - component: {fileID: 4466363746776479788}
+  - component: {fileID: 6887686384173827637}
   m_Layer: 7
-  m_Name: ArmorLVL 2
+  m_Name: Esqueleto Lvl3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rb: {fileID: 7502733119248020330}
-  moveSpeed: 2
+  moveSpeed: 1.8
 --- !u!58 &5262714272494406437
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -225,8 +226,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.013618231, y: -0.12528777}
-  m_Radius: 0.59169614
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.5
 --- !u!114 &4466363746776479788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,5 +240,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f200e8520386e347933ee5db5a56de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  hitPoints: 70
+  hitPoints: 50
   currency: 65
+--- !u!95 &6887686384173827637
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172256901464379989}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: -60918268206185975, guid: 6e776a77adad5ce4aa5455930c0fa704, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
