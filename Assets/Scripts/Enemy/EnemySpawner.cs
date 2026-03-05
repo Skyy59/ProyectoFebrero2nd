@@ -54,7 +54,7 @@ public class EnemySpawner : MonoBehaviour
            
         }
 
-        if (_enemiesAlive == 0 && _enemiesLeftSpawn == 0)
+        if (_enemiesAlive <= 0 && _enemiesLeftSpawn <= 0)
         {
            EndWave(); 
         }
@@ -89,6 +89,7 @@ public class EnemySpawner : MonoBehaviour
         if (_waveIndex + 1 >= waves.Length)
         {
             _waveIndex = -1;
+            GameManager.Instance.Winning();
         }
         else
         {
@@ -98,7 +99,7 @@ public class EnemySpawner : MonoBehaviour
         
         if (_waveIndex == -1)
         {
-            //Termina el juego
+            GameManager.Instance.Winning();
         }
         else
         {
