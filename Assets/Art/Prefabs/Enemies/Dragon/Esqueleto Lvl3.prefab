@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2283967767433374183, guid: 34cfe2235cadba94eab309b7e3cbb01c, type: 3}
+  m_Sprite: {fileID: -1873250279721288372, guid: 068f89600f8078a40a2a2375b60b444a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ Animator:
   m_GameObject: {fileID: 1832649331266844899}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 4337949771316240165, guid: 34cfe2235cadba94eab309b7e3cbb01c, type: 3}
+  m_Controller: {fileID: -4443608015747006192, guid: 068f89600f8078a40a2a2375b60b444a, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -127,8 +127,9 @@ GameObject:
   - component: {fileID: 5541317052067181346}
   - component: {fileID: 5262714272494406437}
   - component: {fileID: 4466363746776479788}
+  - component: {fileID: 6887686384173827637}
   m_Layer: 7
-  m_Name: ArmorLVL 3
+  m_Name: Esqueleto Lvl3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rb: {fileID: 7502733119248020330}
-  moveSpeed: 2
+  moveSpeed: 1.5
 --- !u!58 &5262714272494406437
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -225,8 +226,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.013618231, y: -0.17}
-  m_Radius: 0.59169614
+  m_Offset: {x: 0.03, y: 1}
+  m_Radius: 1.32
 --- !u!114 &4466363746776479788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,5 +240,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f200e8520386e347933ee5db5a56de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  hitPoints: 90
-  currency: 100
+  hitPoints: 120
+  currency: 2000
+--- !u!95 &6887686384173827637
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172256901464379989}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: -4443608015747006192, guid: 068f89600f8078a40a2a2375b60b444a, type: 3}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

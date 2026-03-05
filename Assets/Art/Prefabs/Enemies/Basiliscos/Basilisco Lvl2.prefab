@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2283967767433374183, guid: 34cfe2235cadba94eab309b7e3cbb01c, type: 3}
+  m_Sprite: {fileID: -2672213204483815325, guid: 00f23ae6bc9d7a945a920a5a0ac54dc5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ Animator:
   m_GameObject: {fileID: 1832649331266844899}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 4337949771316240165, guid: 34cfe2235cadba94eab309b7e3cbb01c, type: 3}
+  m_Controller: {fileID: 2519205023880996642, guid: 00f23ae6bc9d7a945a920a5a0ac54dc5, type: 3}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 5262714272494406437}
   - component: {fileID: 4466363746776479788}
   m_Layer: 7
-  m_Name: ArmorLVL 3
+  m_Name: Basilisco Lvl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rb: {fileID: 7502733119248020330}
-  moveSpeed: 2
+  moveSpeed: 1.3
 --- !u!58 &5262714272494406437
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.013618231, y: -0.17}
+  m_Offset: {x: -0.01, y: 0.11}
   m_Radius: 0.59169614
 --- !u!114 &4466363746776479788
 MonoBehaviour:
@@ -239,5 +239,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f200e8520386e347933ee5db5a56de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  hitPoints: 90
-  currency: 100
+  hitPoints: 80
+  currency: 80
