@@ -131,9 +131,5 @@ public class Cannon : MonoBehaviour
         upgradeUI.SetActive(false);
     }
     
-    private void OnDrawGizmosSelected()
-    {
-        Handles.color = Color.red;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetRange);
-    }
+
 }

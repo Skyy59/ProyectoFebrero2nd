@@ -7,8 +7,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public int lives = 5;
-    [SerializeField] private GameObject gameOverIU;
-    [SerializeField] private GameObject winningIU;
+    [SerializeField] private GameObject gameOverUI;
+    [SerializeField] private GameObject winningUI;
+    [SerializeField] private GameObject pauseUI;
 
     private void Awake()
     {
@@ -28,18 +29,30 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         Time.timeScale = 0f;
-        gameOverIU.SetActive(true);
+        gameOverUI.SetActive(true);
     }
 
     public void Winning()
     {
         Time.timeScale = 0f;
-        winningIU.SetActive(true);
+        winningUI.SetActive(true);
     }
 
     public void GoToMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+    }
+
+    public void PauseMenu()
+    {
+        Time.timeScale = 0f;
+        pauseUI.SetActive(true);
+    }
+
+    public void Continue()
+    {
+        Time.timeScale = 1f;
+        pauseUI.SetActive(false);
     }
 }
